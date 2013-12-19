@@ -15,7 +15,7 @@ private:
 public:
   ConcurrentQueue()
   {
-    queueFile = fopen("/home/mathieu/Desktop/Logs/queue.log", "w");
+    queueFile = fopen("/home/sphere/Documents/drew/foureyes/AlloStreamerServer_120413/Logs/ConcurrentQueue.log", "w");
   }
     void push(Data const& data)
     {

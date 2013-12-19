@@ -83,16 +83,19 @@ x264_picture_t pic_in, pic_out;
 //extern const int image_width = 960;
 //extern const int image_height = 540;
 
-extern const int image_width = 1280;
-extern const int image_height = 720;
-    
+//extern const int image_width = 1280;
+//extern const int image_height = 720;
+
+extern const int image_width = 1024;
+extern const int image_height = 576;
+
 //extern const int image_width = 480;
 //extern const int image_height = 270;
 //extern const int image_width = 720;
 //extern const int image_height = 400;
 //extern const int image_width = 64;
 //extern const int image_height = 64;
-const int bit_rate = 8000000;
+const int bit_rate = 15000000;
 const char * preset_val = "ultrafast";
 const char * tune_val = "zerolatency:fastdecode";
 const int FPS = 60;
@@ -270,7 +273,7 @@ count++;
 int
 main(int argc, char *argv[])
 {
-    logz = fopen("/home/mathieu/Desktop/Logs/AlloServer.log", "w");
+    logz = fopen("/home/sphere/Documents/drew/foureyes/AlloStreamerServer_120413/Logs/AlloServer.log", "w");
 
 
   avcodec_register_all();

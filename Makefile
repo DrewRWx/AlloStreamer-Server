@@ -6,7 +6,7 @@ LIBS= $(deps)/boost_1_54/build/lib/libboost_thread.a \
 	-L$(deps)/live/groupsock \
 	-L$(deps)/live/BasicUsageEnvironment \
 	-L$(deps)/live/UsageEnvironment \
-	-L/usr/local/lib \
+	-L$(deps)/install/lib \
 	-lx264 \
 	-lavcodec \
 	-lavdevice \
@@ -33,7 +33,7 @@ INCLUDE= -I$(deps)/live/liveMedia/include \
 	-I$(deps)/live/UsageEnvironment/include \
 	-I$(deps)/live/BasicUsageEnvironment/include \
 	-I$(deps)/boost_1_54/build/include \
-	-I/usr/local/include \
+	-I$(deps)/install/include \
 
 
 all:

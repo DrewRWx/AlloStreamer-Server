@@ -106,7 +106,7 @@ MyDeviceSource::MyDeviceSource(UsageEnvironment& env)
     //%%% TO BE WRITTEN %%%
   }
   ++referenceCount;
-myfile = fopen("/home/mathieu/Desktop/Logs/deviceglxgears.log", "w");
+myfile = fopen("/home/sphere/Documents/drew/foureyes/AlloStreamerServer_120413/Logs/DeviceSource.log", "w");
   // Any instance-specific initialization of the device would be done here:
   //%%% TO BE WRITTEN %%%
 
