@@ -12,23 +12,18 @@ extern "C" {
 #include <pthread.h>
 #include "ConcurrentQueue.h"
 
+#include "../shared2.h"
+
 extern ConcurrentQueue<x264_nal_t> m_queue;
 extern struct SwsContext* convertCtx;
 extern x264_param_t param;
 extern x264_t* encoder;
 extern x264_picture_t pic_in, pic_out;
-//extern unsigned char image[1280*720*3];
-extern unsigned char image[1024*576*3];
+extern unsigned char image[image_width*image_height*3];
 extern pthread_mutex_t mutex;
 extern AVCodec *codec;
 extern AVCodecContext *c;
 extern AVFrame *frame;
 extern AVFrame *iframe;
 extern AVPacket pkt;
-extern const int image_width;
-extern const int image_height;
-
-
-
 #endif
-

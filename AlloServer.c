@@ -49,7 +49,6 @@ extern "C" {
 
 #include <pthread.h>
 
-#include "../shared2.h"
 #include <sys/stat.h>
 
 //#define FORSTREAMING 1
@@ -82,23 +81,7 @@ x264_t* encoder;
 x264_picture_t pic_in, pic_out;
     
 //Encoder param
-//extern const int image_width = 1920;
-//extern const int image_height = 1080;
-//extern const int image_width = 960;
-//extern const int image_height = 540;
-
-//extern const int image_width = 1280;
-//extern const int image_height = 720;
-
-extern const int image_width = 1024;
-extern const int image_height = 576;
-
-//extern const int image_width = 480;
-//extern const int image_height = 270;
-//extern const int image_width = 720;
-//extern const int image_height = 400;
-//extern const int image_width = 64;
-//extern const int image_height = 64;
+// Image width and height define in shared2.h .
 const int bit_rate = 15000000;
 const char * preset_val = "ultrafast";
 const char * tune_val = "zerolatency:fastdecode";
