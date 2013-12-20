@@ -3,6 +3,7 @@
 #include <boost/thread/thread.hpp>
 #include <stdio.h>
 #include <queue>
+#include "../shared2.h"
 
 template<typename Data>
 class ConcurrentQueue
@@ -15,7 +16,8 @@ private:
 public:
   ConcurrentQueue()
   {
-    queueFile = fopen("/home/sphere/Documents/drew/foureyes/AlloStreamerServer_120413/Logs/ConcurrentQueue.log", "w");
+    std::string queue_log = log_dir + "ConcurrentQueue.log";
+    queueFile = fopen(queue_log.c_str(), "w");
   }
     void push(Data const& data)
     {

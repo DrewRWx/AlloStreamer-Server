@@ -48,6 +48,10 @@ extern "C" {
 #include <string.h>
 
 #include <pthread.h>
+
+#include "../shared2.h"
+#include <sys/stat.h>
+
 //#define FORSTREAMING 1
 //#ifdef FORSTREAMING
 //#include <libavcodec/avcodec.h>
@@ -273,7 +277,15 @@ count++;
 int
 main(int argc, char *argv[])
 {
-    logz = fopen("/home/sphere/Documents/drew/foureyes/AlloStreamerServer_120413/Logs/AlloServer.log", "w");
+    // http://ubuntuforums.org/showthread.php?t=1004557
+    struct stat sb;
+    if (stat(log_dir.c_str(), &sb) != 0)
+    {
+      mkdir(log_dir.c_str(), S_IRWXU);
+    }
+
+    std::string allo_log = log_dir + "AlloServer.log";
+    logz = fopen(allo_log.c_str(), "w");
 
 
   avcodec_register_all();

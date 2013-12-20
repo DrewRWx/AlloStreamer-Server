@@ -106,7 +106,8 @@ MyDeviceSource::MyDeviceSource(UsageEnvironment& env)
     //%%% TO BE WRITTEN %%%
   }
   ++referenceCount;
-myfile = fopen("/home/sphere/Documents/drew/foureyes/AlloStreamerServer_120413/Logs/DeviceSource.log", "w");
+  std::string device_log = log_dir + "DeviceSource.log";
+  myfile = fopen(device_log.c_str(), "w");
   // Any instance-specific initialization of the device would be done here:
   //%%% TO BE WRITTEN %%%
 
