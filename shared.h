@@ -12,8 +12,6 @@ extern "C" {
 #include <pthread.h>
 #include "ConcurrentQueue.h"
 
-#include "../shared2.h"
-
 extern ConcurrentQueue<x264_nal_t> m_queue;
 extern struct SwsContext* convertCtx;
 extern x264_param_t param;
