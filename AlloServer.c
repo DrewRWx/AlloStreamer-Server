@@ -257,18 +257,10 @@ count++;
 }
 
 
-int
-main(int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-    // http://ubuntuforums.org/showthread.php?t=1004557
-    struct stat sb;
-    if (stat(log_dir.c_str(), &sb) != 0)
-    {
-      mkdir(log_dir.c_str(), S_IRWXU);
-    }
-
-    std::string allo_log = log_dir + "AlloServer.log";
-    logz = fopen(allo_log.c_str(), "w");
+  std::string allo_log = log_dir + "AlloServer.log";
+  logz = fopen(allo_log.c_str(), "w");
 
 
   avcodec_register_all();
