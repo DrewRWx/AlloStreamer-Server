@@ -31,4 +31,4 @@ INCLUDE=\
 
 
 all:
-	g++ -o AlloServer -g -Wl,--no-as-needed $(SRC) $(LIBS) $(INCLUDE) 
+	g++ -O2 -o AlloServer -g -Wl,--no-as-needed $(SRC) $(LIBS) $(INCLUDE) 
