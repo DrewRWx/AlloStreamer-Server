@@ -1,7 +1,4 @@
-deps= ../deps
-
 LIBS=\
--L$(deps)/boost_1_54/build/lib \
 -lboost_thread \
 -lboost_system \
 -lx264 \
@@ -26,7 +23,6 @@ serverUni.cpp \
 H264VideoOnDemandServerMediaSubsession.cpp
 
 INCLUDE=\
--I$(deps)/boost_1_54/build/include \
 -I/usr/include/liveMedia \
 -I/usr/include/groupsock \
 -I/usr/include/UsageEnvironment \
