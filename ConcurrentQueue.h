@@ -1,7 +1,7 @@
-#include <boost/thread/mutex.hpp>
-#include <boost/thread/condition_variable.hpp>
+// #include <boost/thread/mutex.hpp>
+// #include <boost/thread/condition_variable.hpp>
 #include <boost/thread/thread.hpp>
-#include <stdio.h>
+// #include <stdio.h>
 #include <queue>
 #include "../shared2.h"
 

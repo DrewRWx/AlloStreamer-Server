@@ -37,19 +37,19 @@ void signalNewFrameData();
 #include "FrameData.h"
 #include <boost/interprocess/shared_memory_object.hpp>
 #include <boost/interprocess/mapped_region.hpp>
-#include <cstring>
-#include <cstdlib>
-#include <stdio.h>
-#include "shared.h"
-extern "C" {
-#include <math.h>
-#include <stdlib.h>
+// #include <cstring>
+// #include <cstdlib>
+// #include <stdio.h>
+// #include "shared.h"
+// extern "C" {
+// #include <math.h>
+// #include <stdlib.h>
 
-#include <string.h>
+// #include <string.h>
 
-#include <pthread.h>
+// #include <pthread.h>
 
-#include <sys/stat.h>
+// #include <sys/stat.h>
 
 //#define FORSTREAMING 1
 //#ifdef FORSTREAMING
@@ -58,7 +58,7 @@ extern "C" {
 //#include <libavutil/imgutils.h>
 //#include <libavutil/time.h>
 //#include <libswscale/swscale.h>
-}
+// }
 
 /* disable printf */
 //#define printf(...)
@@ -91,8 +91,8 @@ const int FPS = 60;
 unsigned char image[image_width*image_height*3];
 
 
-#include <sys/time.h>
-#include <unistd.h>
+// #include <sys/time.h>
+// #include <unistd.h>
 
 
 AVFrame *frame1;

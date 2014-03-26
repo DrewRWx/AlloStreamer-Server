@@ -27,11 +27,11 @@ along with this library; if not, write to the Free Software Foundation, Inc.,
 #endif
 
 #include "MyDeviceSource.hh"
-#include <GroupsockHelper.hh> // for "gettimeofday()"
-#include "shared.h"
+// #include <GroupsockHelper.hh> // for "gettimeofday()"
+// #include "shared.h"
 //#include "stdafx.h"
-#include <stdint.h>
-#include <time.h>
+// #include <stdint.h>
+// #include <time.h>
 
 int counter = 0;
 int64_t start_sum = 0;
