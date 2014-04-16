@@ -1,6 +1,32 @@
+UNAME := $(shell uname)
+
+ifeq ($(UNAME),Darwin)
+LIBS=\
+-L/opt/local/lib \
+$(addprefix -L,$(wildcard /opt/local/lib/live/*)) \
+-lboost_thread-mt \
+-lboost_system-mt
+
+INCLUDE=\
+-I/usr/local/include \
+-I/opt/local/include \
+$(addprefix -I,$(wildcard /opt/local/lib/live/*/include))
+else
 LIBS=\
 -lboost_thread \
 -lboost_system \
+-lrt
+
+INCLUDE=\
+-I/usr/include/liveMedia \
+-I/usr/include/groupsock \
+-I/usr/include/UsageEnvironment \
+-I/usr/include/BasicUsageEnvironment
+
+EXTRA_FLAGS= -Wl,--no-as-needed
+endif
+
+LIBS+=\
 -lx264 \
 -lavcodec \
 -lavdevice \
@@ -13,8 +39,7 @@ LIBS=\
 -lBasicUsageEnvironment \
 -lUsageEnvironment \
 -lpthread \
--lm \
--lrt
+-lm
 
 SRC=\
 MyDeviceSource.cpp \
@@ -22,13 +47,8 @@ AlloServer.c \
 serverUni.cpp \
 H264VideoOnDemandServerMediaSubsession.cpp
 
-INCLUDE=\
--I/usr/include/liveMedia \
--I/usr/include/groupsock \
--I/usr/include/UsageEnvironment \
--I/usr/include/BasicUsageEnvironment
+all: clean
+	g++ -O2 -o AlloServer -g $(EXTRA_FLAGS) $(SRC) $(LIBS) $(INCLUDE)
 
-
-
-all:
-	g++ -O2 -o AlloServer -g -Wl,--no-as-needed $(SRC) $(LIBS) $(INCLUDE) 
+clean:
+	rm AlloServer
