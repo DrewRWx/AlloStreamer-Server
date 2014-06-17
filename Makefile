@@ -1,4 +1,4 @@
-UNAME := $(shell uname)
+include ../Makefile.inc
 
 ifeq ($(UNAME),Darwin)
 LIBS=\
@@ -50,5 +50,8 @@ H264VideoOnDemandServerMediaSubsession.cpp
 all: clean
 	g++ -O2 -o AlloServer -g $(EXTRA_FLAGS) $(SRC) $(LIBS) $(INCLUDE)
 
+pedantic: clean
+	g++ -pedantic -o AlloServer -g $(EXTRA_FLAGS) $(SRC) $(LIBS) $(INCLUDE)
+
 clean:
-	rm AlloServer
+	rm -rf AlloServer AlloServer.dSYM
